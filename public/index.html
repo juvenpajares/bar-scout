@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BarScout PH MVP</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">TagayTrail PH</p>
+        <h1>BarScout PH MVP</h1>
+        <p class="subtitle">
+          Discover, compare, and check live reports before you head out.
+        </p>
+      </div>
+      <div class="cta-group">
+        <button class="primary" id="locateBtn">Use Current Location</button>
+        <button class="ghost" id="pinBtn">Pin Location</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="filters">
+        <h2>Find Bars Near You</h2>
+        <div class="filter-row">
+          <label>
+            Price Range
+            <select id="priceFilter">
+              <option value="">Any</option>
+              <option value="₱">₱</option>
+              <option value="₱₱">₱₱</option>
+              <option value="₱₱₱">₱₱₱</option>
+            </select>
+          </label>
+          <label>
+            Vibe
+            <select id="vibeFilter">
+              <option value="">Any</option>
+              <option value="Chill">Chill</option>
+              <option value="Party">Party</option>
+              <option value="Live Music">Live Music</option>
+            </select>
+          </label>
+          <button id="applyFilters">Apply Filters</button>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel">
+          <h3>Nearby Bars</h3>
+          <div id="barsList" class="bars-list"></div>
+        </div>
+
+        <div class="panel">
+          <h3>Versus Mode</h3>
+          <p class="muted">Select 2–3 bars to compare.</p>
+          <div id="compareList" class="compare-list"></div>
+        </div>
+
+        <div class="panel">
+          <h3>Tagay Pulse (Live Reports)</h3>
+          <div id="reportsList" class="reports-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
